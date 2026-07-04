@@ -8,7 +8,7 @@ export default defineConfig(() => {
     // 👇 Esta es la línea clave para GitHub Pages. 
     // Si tu repositorio en GitHub se llama exactamente "EcoUNP", déjalo así. 
     // Si lo llamaste diferente, pon el nombre exacto entre las barras.
-    base: '/EcoUNP/',
+
 
     plugins: [react(), tailwindcss()],
     resolve: {
