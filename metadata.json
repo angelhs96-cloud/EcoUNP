@@ -1,0 +1,6 @@
+{
+  "name": "EcoUNP",
+  "description": "Aplicación móvil y centro de comando ecológico premium para estudiantes de la UNP, diseñada para el fomento de la sostenibilidad y el reciclaje.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

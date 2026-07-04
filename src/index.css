@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Sistema de temas (claro / oscuro)
+   Los colores neutros se exponen como tokens semánticos y cambian
+   según la clase .light en <html>. El verde de marca y los acentos
+   se mantienen constantes en ambos temas.
+----------------------------------------------------------------- */
+@theme inline {
+  --color-app: var(--app);
+  --color-elevated: var(--elevated);
+  --color-surface: var(--surface);
+  --color-surface-hi: var(--surface-hi);
+  --color-surface2: var(--surface2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+}
+
+/* Tema oscuro (por defecto) */
+:root {
+  color-scheme: dark;
+  --app: #070908;
+  --elevated: #0c100c;
+  --surface: #1E2521;
+  --surface-hi: #252E29;
+  --surface2: #121614;
+  --line: #2E3732;
+  --ink: #DEE4DB;
+  --ink-muted: #BDCABC;
+}
+
+/* Tema claro */
+.light {
+  color-scheme: light;
+  --app: #eaeee8;
+  --elevated: #ffffff;
+  --surface: #ffffff;
+  --surface-hi: #f0f3ee;
+  --surface2: #f3f5f1;
+  --line: #d9e0d6;
+  --ink: #16190f;
+  --ink-muted: #566356;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--app);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.25s ease;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
